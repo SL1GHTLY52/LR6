@@ -37,3 +37,50 @@
 
 ### 10. Ветка для отчета
 ![создание](screenshots/10_branch.jpg)
+
+## Лог команд
+```bash
+git config --global user.name "4541В Шабуров И.А."
+git config --global user.email "shaburashka24@gmail.com"
+git config --list
+git clone https://github.com/SL1GHTLY52/LR6.git
+cd LR6
+git pull
+git branch -a
+git log master
+git checkout -b feature
+echo "строка для ветки feature" >> test.txt
+git add test.txt
+git commit -m "в ветке feature изменен test.txt"
+git checkout master
+echo "строка для ветки master" >> test.txt
+git add test.txt
+git commit -m "в ветке master изменен test.txt"
+git log master
+git log feature
+git log --oneline --graph --all
+git show
+git diff master feature
+git checkout master
+git merge feature
+git mergetool test.txt
+notepad test.txt
+git add test.txt
+git commit -m "слияние feature в ветку master, разрешен конфликт в test.txt"
+git log --oneline --graph --all
+git branch -d feature
+git branch -a
+echo "файл с именами студентов" > names.txt
+git add names.txt
+git commit -m "добавлен файл для имен студентов names.txt"
+echo "файл с датами рождения студентов" > birthday.txt
+git add birthday.txt
+git commit -m "добавлен файл для дат рождений студентов birthday.txt"
+echo "Шабуров Иван Александрович" >> names.txt
+git add names.txt
+git commit -m "в файл names.txt добавлен новый студент"
+git log --oneline
+git revert HEAD
+git checkout -b report
+mkdir screenshots
+```
