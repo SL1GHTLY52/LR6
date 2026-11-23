@@ -83,4 +83,16 @@ git log --oneline
 git revert HEAD
 git checkout -b report
 mkdir screenshots
+cp "/e/фото лабы"/* screenshots/
+git status
+git add README.md screenshots/
+git commit -m "Добавленые первые 5 пунктов отчета и соответствующие скриншоты"
+пше ыефегы
+git status
+cp "/e/фото лабы"/* screenshots/
+git add README.md screenshots/
+git commit -m "Добавленые следующие 5 пунктов отчета и соответствующие скриншоты"
+git status
+git add README.md
+git commit -m "Добавлен Лог команд"
 ```
